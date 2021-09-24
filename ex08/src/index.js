@@ -1,9 +1,10 @@
 function myMutation (arr) {
-    var a ="Niho";
-    newStr = arr[0].indexOf(arr[1]) != -1;
-
-    return newStr;
-
+    return arr[1].toLowerCase()
+    .split('')
+    .every(function(letter) {
+      return arr[0].toLowerCase().indexOf(letter) != -1;
+        
+    });
 }
 console.log(myMutation(["hello","hey"]));
 console.log(myMutation(["hello","Hello"]));
